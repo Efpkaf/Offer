@@ -1,0 +1,17 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+group 'com.example'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    compile 'joda-time:joda-time:2.10.10'
+    api project(":step")
+    api project(':integrations:common')
+}
