@@ -9,6 +9,7 @@ include(
     "step",
     "searching-phrase",
     "searching-phrase:contract",
-    "publisher"
+    "publisher",
+    "publisher:contract"
 )
 

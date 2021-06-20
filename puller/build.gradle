@@ -14,5 +14,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     api project(":searching-phrase:contract")
     api project(":step")
+    api project(":publisher:contract")
     api project(":integrations:common")
 }
