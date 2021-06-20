@@ -1,11 +1,13 @@
 package com.offer.integrations.common.pipe
 
-import com.offer.searchingPhrase.PhraseDto
+import com.offer.searchingPhrase.PhrasesDto
 import com.offer.step.step.Pipe
 
-class PhraseToSearchingItemPropertiesPipe: Pipe<PhraseDto, SearchingItemProperties> {
+data class PhraseToSearchingItemPropertiesPipe(
+    val phrases: PhrasesDto
+): Pipe<List<SearchingItemProperties>> {
 
-    override fun process(value: PhraseDto): SearchingItemProperties {
-        return SearchingItemProperties(value.searchingPhase, value.lastSearchingDate)
+    override fun process(): List<SearchingItemProperties> {
+        return phrases.phrases.map { SearchingItemProperties(it.searchingPhase, it.lastSearchingDate) }
     }
 }

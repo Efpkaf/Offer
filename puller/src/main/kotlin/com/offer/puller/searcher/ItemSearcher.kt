@@ -2,8 +2,9 @@ package com.offer.puller.searcher
 
 import com.offer.integrations.common.data.ExternalItems
 import org.springframework.stereotype.Component
-import com.offer.integrations.common.pipe.PhraseToSearchingItemPropertiesPipe
 import com.offer.integrations.common.pipe.SearchingItemProperties
+import com.offer.integrations.common.pipe.toPipe
+import com.offer.integrations.common.provider.processFilter
 import com.offer.searchingPhrase.provider.PhraseProvider
 import com.offer.step.step.Filter
 
@@ -16,9 +17,7 @@ internal data class ItemSearcher(
     //@Scheduled("********")
     fun run() {
         phraseProvider.process(null)
-            .phrases.map { PhraseToSearchingItemPropertiesPipe().process(it) }
-            .map { props ->
-                externalItemsProviders.map { it.process(props) }
-            }
+            .toPipe().process()
+            .processFilter(externalItemsProviders)
     }
 }

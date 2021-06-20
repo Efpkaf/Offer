@@ -1,6 +1,6 @@
 package com.offer.integrations.olx
 
-import com.offer.integrations.common.client.ExternalItemsProvider
+import com.offer.integrations.common.provider.ExternalItemsProvider
 import com.offer.integrations.common.data.ExternalItems
 import org.springframework.stereotype.Component
 import com.offer.integrations.common.pipe.SearchingItemProperties
