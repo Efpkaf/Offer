@@ -17,7 +17,8 @@ internal data class ItemSearcher(
     //@Scheduled("********")
     fun run() {
         phraseProvider.process(null)
-            .toPipe().process()
+            .toPipe()
             .processFilter(externalItemsProviders)
+            .toPipe()
     }
 }

@@ -8,5 +8,7 @@ include(
     "integrations:common",
     "step",
     "searching-phrase",
-    "searching-phrase:contract"
+    "searching-phrase:contract",
+    "publisher"
 )
+
