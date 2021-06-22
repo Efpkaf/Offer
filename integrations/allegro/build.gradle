@@ -11,6 +11,6 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    implementation project(':step')
+    implementation project(':step') // TODO: why this is needed since we have api project (:integration:common) ?
     api project(':integrations:common')
 }
