@@ -7,6 +7,7 @@ import com.offer.integrations.common.pipe.toSearchingItemPropertiesPipe
 import com.offer.integrations.common.provider.processFilter
 import com.offer.searchingPhrase.provider.PhraseProvider
 import com.offer.step.step.Filter
+import com.offer.publisher.contract.pipe.ExternalItemsToPublisherMessagePipe
 
 @Component
 internal data class ItemSearcher(

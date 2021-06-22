@@ -11,8 +11,8 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    api project(':integrations:olx')
-    api project(':integrations:otomoto')
-    api project(':integrations:allegro')
-    api project(':integrations:common')
+    implementation project(':integrations:olx')
+    implementation project(':integrations:otomoto')
+    implementation project(':integrations:allegro')
+    implementation project(':integrations:common')
 }

@@ -11,6 +11,6 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    api project(":step")
+    implementation project(":step")
     compile project(":searching-phrase:contract")
 }
