@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    implementation project(":step")
-    compile project(":searching-phrase:contract")
+    compile 'org.springframework.boot:spring-boot:2.4.5'
+    implementation project(':step')
+    implementation project(':searching-phrase:contract')
 }
