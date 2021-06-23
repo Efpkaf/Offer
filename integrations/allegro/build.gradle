@@ -13,4 +13,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation project(':step') // TODO: why this is needed since we have api project (:integration:common) ?
     api project(':integrations:common')
+    testCompile("org.junit.jupiter:junit-jupiter-params:5.7.0")
 }
